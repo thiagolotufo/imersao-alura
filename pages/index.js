@@ -67,7 +67,6 @@ export default function PaginaInicial() {
             onSubmit={
               function (event) {
                 event.preventDefault()
-                console.log('submit')
                 roteamento.push('/chat')
               }
             }
