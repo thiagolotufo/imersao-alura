@@ -19,13 +19,7 @@ export default function ChatPage() {
   const roteamento = useRouter();
   const loggedUser = roteamento.query.username;
   const [mensagem, setMensagem] = React.useState("");
-  const [listaMensagens, setListaMensagens] = React.useState([
-    {
-      id: 1,
-      de: "thiagolotufo",
-      texto: ":stickr: URL_da_imagem",
-    },
-  ]);
+  const [listaMensagens, setListaMensagens] = React.useState([]);
 
   React.useEffect(() => {
     const dadosDoSupabase = supabaseClient
