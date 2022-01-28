@@ -23,7 +23,6 @@ function Title(props) {
 }
 
 export default function PaginaInicial() {
-  //const username = "thiago.lotufo";
 
   const [username, setUsername ] = React.useState('thiagolotufo')
   const roteamento = useRouter();
@@ -61,13 +60,12 @@ export default function PaginaInicial() {
             backgroundColor: appConfig.theme.colors.neutrals[700],
           }}
         >
-          {/* Formulário */}
           <Box
             as="form"
             onSubmit={
               function (event) {
                 event.preventDefault()
-                roteamento.push('/chat')
+                roteamento.push(`/chat?username=${username}`)
               }
             }
             styleSheet={{
